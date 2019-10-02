@@ -53,30 +53,30 @@ Passo a passo de como criar o droplet:
 ### **Configuração inicial depois de instalar o ubuntu**
 
 * Logando como root e criando novo usuario
-  1. `ssh root@server_ip`
-  2. Não é ideal ficar fazendo alterações com a conta root, então vamos criar um novo user, como exemplo irei usar meu nome, mas lembre de mudar para o seu nome de usuario:
+  **1.** `ssh root@server_ip`
+  **2.** Não é ideal ficar fazendo alterações com a conta root, então vamos criar um novo user, como exemplo irei usar meu nome, mas lembre de mudar para o seu nome de usuario:
   ```sh
   adduser victor
   ```
-  3. Daremos acesso de administrador a esse usuario: 
+  **3.** Daremos acesso de administrador a esse usuario: 
    ```sh
    usermod -aG sudo victor
    ```
-  4. Ligando o firewall e permitindo conexões ssh: 
+  **4.** Ligando o firewall e permitindo conexões ssh: 
   ```sh
   ufw allow OpenSSH
   ufw enable
   ```
-  5. Se você optou por usar o SSH key ao inves da senha, você ira precisar copiar a sua chave ssh para o `~/.ssh/authorized_keys`, para isso use o seguinte comando:
+  **5.** Se você optou por usar o SSH key ao inves da senha, você ira precisar copiar a sua chave ssh para o `~/.ssh/authorized_keys`, para isso use o seguinte comando:
   ```sh
   rsync --archive --chown=victor:victor ~/.ssh /home/victor
   ```
-  6. Agora de `logout` e entre com a conta:
+  **6.** Agora de `logout` e entre com a conta:
   ```sh
   ssh victor@server_ip
   ```
 * Instalando Node.js e yarn
-  1. A seguir irei passar o comando necessario para instalar o Node.js 12
+  **1.** A seguir irei passar o comando necessario para instalar o Node.js 12
   ```sh
   sudo apt-get install curl
   curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -88,7 +88,7 @@ Passo a passo de como criar o droplet:
   curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
   sudo apt-get install nodejs
   ```
-  2. Instalando yarn:
+  **2.** Instalando yarn:
   ```sh
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
