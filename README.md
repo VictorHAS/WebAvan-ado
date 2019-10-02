@@ -53,7 +53,9 @@ Passo a passo de como criar o droplet:
 ### **Configuração inicial depois de instalar o ubuntu**
 
 * Logando como root e criando novo usuario
-  **1.** `ssh root@server_ip`
+  
+  **1.**`ssh root@server_ip`
+  
   **2.** Não é ideal ficar fazendo alterações com a conta root, então vamos criar um novo user, como exemplo irei usar meu nome, mas lembre de mudar para o seu nome de usuario:
   ```sh
   adduser victor
