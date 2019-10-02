@@ -16,6 +16,7 @@
   - [**Configuração inicial depois de instalar o ubuntu**](#configura%c3%a7%c3%a3o-inicial-depois-de-instalar-o-ubuntu)
 
 <hr/>
+
 ## **Criar droplet na DigitalOcean**
 
 Passo a passo de como criar o droplet:
