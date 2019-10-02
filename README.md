@@ -14,6 +14,8 @@
 - [**Tabela de conteudo**](#tabela-de-conteudo)
 - [**Criar droplet na DigitalOcean**](#criar-droplet-na-digitalocean)
   - [**Configuração inicial depois de instalar o ubuntu**](#configura%c3%a7%c3%a3o-inicial-depois-de-instalar-o-ubuntu)
+    - [Logando como root e criando novo usuario](#logando-como-root-e-criando-novo-usuario)
+    - [Instalando Node.js e yarn](#instalando-nodejs-e-yarn)
 
 <hr/>
 
@@ -52,10 +54,10 @@ Passo a passo de como criar o droplet:
 
 ### **Configuração inicial depois de instalar o ubuntu**
 
-* Logando como root e criando novo usuario
+#### Logando como root e criando novo usuario
   
   **1.** `ssh root@server_ip`
-  
+
   **2.** Não é ideal ficar fazendo alterações com a conta root, então vamos criar um novo user, como exemplo irei usar meu nome, mas lembre de mudar para o seu nome de usuario:
   ```sh
   adduser victor
@@ -77,7 +79,7 @@ Passo a passo de como criar o droplet:
   ```sh
   ssh victor@server_ip
   ```
-* Instalando Node.js e yarn
+#### Instalando Node.js e yarn
   **1.** A seguir irei passar o comando necessario para instalar o Node.js 12
   ```sh
   sudo apt-get install curl
